@@ -147,6 +147,20 @@
             padding-left: 24px;
         }
 
+        .dropdown-item.disabled {
+            color: #999;
+            cursor: not-allowed;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .dropdown-item.disabled:hover {
+            background: none;
+            color: #999;
+            border-left-color: transparent;
+            padding-left: 20px;
+        }
+
         /* 标签指示器 */
         .area-label {
             position: absolute;
@@ -379,8 +393,8 @@
                 <div class="area-label">工厂</div>
                 <div class="click-hint"></div>
                 <div class="dropdown-menu" id="dropdown-factory">
-                    <a target="_blank" href="https://msnyueyue-art.github.io/Energy-Standard/" class="dropdown-item" data-system="储能柜管理系统-标准版">储能柜管理系统-标准版</a>
-                    <a target="_blank" href="https://moss-xxh.github.io/Energy-cabinet/" class="dropdown-item" data-system="储能柜管理系统-专业版">储能柜管理系统-专业版</a>
+                    <a target="_blank" href="https://msnyueyue-art.github.io/Energy-Standard/" class="dropdown-item disabled" data-system="储能柜管理系统-标准版">储能柜管理系统-标准版</a>
+                    <a target="_blank" href="https://msnyueyue-art.github.io/Energy-Pro/" class="dropdown-item" data-system="储能柜管理系统-专业版">储能柜管理系统-专业版</a>
                 </div>
             </div>
 
@@ -448,7 +462,7 @@
         };
 
         // 当前语言状态
-        let currentLanguage = localStorage.getItem('preferred-language') || 'zh';
+        let currentLanguage = localStorage.getItem('preferred-language') || 'en';
 
         // 更新页面文本为指定语言
         function updatePageLanguage(lang) {
